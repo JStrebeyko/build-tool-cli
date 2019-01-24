@@ -1,7 +1,7 @@
 {
   "repositories": {
-    "re-pro": {
-      "url": "https://username:password@git.mdbootstrap.com/mdb/react/re-pro.git",
+    "vu-pro": {
+      "url": "https://username:password@git.mdbootstrap.com/mdb/vue/vu-pro.git",
       "referenceBranch": "dev",
       "workingBranch": "auto-build-test",
       "filesToEdit": [

@@ -9,9 +9,9 @@ const deleteFiles = require('../helpers/deleteFiles');
 const path = require('path');
 const { RE_PRO } = require('../constans/packages-types');
 
-const rePro = async ({ version, lastVersionNumber }) => {
-  const baseRepoName = 're-pro';
-  const targetRepoName = 'react-demo';
+const vuPro = async ({ version, lastVersionNumber }) => {
+  const baseRepoName = 'vu-pro';
+  const targetRepoName = 'vue-demo';
 
   const baseRepoPath = getPathToRepo(baseRepoName);
   const baseRepoDocsPath = path.join(baseRepoPath, 'docs');
@@ -51,4 +51,4 @@ const rePro = async ({ version, lastVersionNumber }) => {
   await createZip(targetRepoName, RE_PRO);
 };
 
-module.exports = rePro;
+module.exports = vuPro;

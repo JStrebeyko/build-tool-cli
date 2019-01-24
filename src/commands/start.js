@@ -1,14 +1,14 @@
 const wizard = require('../setup/wizard');
 const getLastVersionNumber = require('../helpers/getLastVersionNumber');
 const update = require('./update');
-const rePro = require('./rePro');
+const vuPro = require('./vuPro');
 const reFree = require('./reFree');
 const reAdmin = require('./reAdmin');
 const reBoundle = require('./reBoundle');
 const log = require('../helpers/log');
 const { INFO } = require('../constans/log-types');
 const {
-  RE_PRO,
+  VU_PRO,
   RE_FREE,
   RE_BOUNDLE,
   RE_ADMIN
@@ -19,9 +19,9 @@ const setup = async () => {
 
   update({ login, password, packagesToCreate });
 
-  const lastVersionNumber = getLastVersionNumber('re-pro');
+  const lastVersionNumber = getLastVersionNumber('vu-pro');
 
-  packagesToCreate.includes(RE_PRO) && await rePro({ version, lastVersionNumber });
+  packagesToCreate.includes(VU_PRO) && await vuPro({ version, lastVersionNumber });
   packagesToCreate.includes(RE_ADMIN) && await reAdmin({ version, lastVersionNumber });
   packagesToCreate.includes(RE_BOUNDLE) && await reBoundle();
   packagesToCreate.includes(RE_FREE) && await reFree({ version, lastVersionNumber, commitMessage });
